@@ -1,0 +1,77 @@
+PC01:  2001:718:1001:2c8:ffb3:4d09:e5fc:b313
+PC02:  2001:718:1001:2c8:725c:8423:b297:3b58
+PC03:  2001:718:1001:2c8:7639:a532:9118:8883
+PC04:  2001:718:1001:2c8:f83f:65f7:d0c6:6f50
+PC05:  2001:718:1001:2c8:8bb8:eb95:c638:74dd
+PC06:  2001:718:1001:2c8:d50c:7d9a:dd4a:72dc
+PC07:  2001:718:1001:2c8:8a45:c95a:b619:387e
+PC08:  2001:718:1001:2c8:bdcb:2aa1:d056:0083
+PC09:  2001:718:1001:2c8:f01a:c296:c3fd:834d
+PC10:  2001:718:1001:2c8:2272:5426:3f42:9af3
+PC11:  2001:718:1001:2c8:a6f3:a620:8c7a:dd45
+PC12:  2001:718:1001:2c8:9ef1:62ef:f1fe:47f1
+
+*/1  * * * rsync ~student/BACKUP [2001:718:1001:2c8:ffb3:4d09:e5fc:b313]:/home/student/PC12BACKUP -rv
+
+sudo ifconfig enx00e04c68019b 10.11.12.6 netmask 255.255.255.0 up
+sudo route add default gw 10.11.12.1
+
+enx00e04c68019b
+
+
+
+network:
+  version: 2
+  ethernets:
+    enx00e04c68019b:
+      dhcp4: no
+      dhcp6: no
+  bridges:
+    br0:
+      interfaces: [enx00e04c68019b]
+      dhcp4: no
+      addresses: [10.11.12.6/24]
+      gateway4: 10.11.12.1
+      nameservers:
+        addresses: [158.196.0.53]
+        
+        
+        [14:25] Kapicak Lukas
+    
+
+sudo service libvirtd start
+
+
+
+​    
+
+sudo update-rc.d libvirtd enable
+
+
+
+
+​    
+
+netplan apply
+
+
+[14:18] Kapicak Lukas
+sudo    virt-install \
+--name ctest1 \
+--ram 1024 \
+--disk pool=default,size=20,bus=virtio,format=qcow2 \
+--vcpus 1 \
+--os-type linux \
+--os-variant ubuntu16.04 \
+--network bridge:br0 \
+--graphics none \
+--console pty,target_type=serial \
+--location 'http://gb.archive.ubuntu.com/ubuntu/dists/xenial/main/installer-amd64/' \
+--extra-args 'console=ttyS0,115200n8 serial' \
+ --force --debug
+<https://teams.microsoft.com/l/message/19:0c37643789794a2b8e4122a23a68e0c9@thread.tacv2/1603369084628?tenantId=06ffb557-4f06-4d38-a637-4e5dfd787da2&amp;groupId=54ee6bc5-266a-432f-ba17-f8203898ce6a&amp;parentMessageId=1603362744981&amp;teamName=PKS II CT 12:30&amp;channelName=Obecné&amp;createdTime=1603369084628>
+
+
+auth    sufficient  /lib/security/pam_tacplus.so debug server=tacacs secret=testing123 prompt=password:_
+account sufficient  /lib/security/pam_tacplus.so debug service=raccess protocol=ip
+session sufficient  /lib/security/pam_tacplus.so debug server=tacacs secret=testing123 prompt=password:_ service=raccess protocol=ip

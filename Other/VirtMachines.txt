@@ -1,0 +1,65 @@
+PKSII - seznam studentu pro virtual machine
+
+Pripojeni k serveru napr.: ssh -6 student@2001:718:1001:2c6::xxx
+hesla: student:student
+
+IPv6 2001:718:1001:2c6::/64
+
+pksII-ct-0715-Hriva-Michal-101		2001:718:1001:2c6::101 
+pksII-ct-0715-Lanzendorfer-Petr-102	2001:718:1001:2c6::102
+pksII-ct-0715-Lauterbach-Filip-103	2001:718:1001:2c6::103
+pksII-ct-0715-Lichnovsky-Radek-104	2001:718:1001:2c6::104
+pksII-ct-0715-Pecina-Michal-105		2001:718:1001:2c6::105
+pksII-ct-0715-Rzyman-Radoslav-106	2001:718:1001:2c6::106
+pksII-ct-0715-Sevcik-Jan-107		2001:718:1001:2c6::107
+pksII-ct-0715-Tomasko-Martin-108	2001:718:1001:2c6::108
+pksII-ct-0715-Tomas-Matej-109		2001:718:1001:2c6::109
+pksII-ct-0715-Vich-Radim-10a		2001:718:1001:2c6::10a
+pksII-ct-0715--10b		2001:718:1001:2c6::10b
+pksII-ct-0715--10c		2001:718:1001:2c6::10c
+
+
+pksII-ct-0945-Brat-Daniel-111		2001:718:1001:2c6::111
+pksII-ct-0945-Freisler-Ondrej-112	2001:718:1001:2c6::112
+pksII-ct-0945-Hmilansky-Tomas-113	2001:718:1001:2c6::113
+pksII-ct-0945-Klobasa-Lukas-114		2001:718:1001:2c6::114
+pksII-ct-0945-Kovarik-Jaromir-115	2001:718:1001:2c6::115
+pksII-ct-0945-Macak-Tomas-116		2001:718:1001:2c6::116
+pksII-ct-0945-Navratil-Marek-117	2001:718:1001:2c6::117
+pksII-ct-0945-Nedojedly-Matej-118	2001:718:1001:2c6::118
+pksII-ct-0945-Scurek-Petr-119		2001:718:1001:2c6::119
+pksII-ct-0945-Stekr-Tomas-11a		2001:718:1001:2c6::11a
+pksII-ct-0945-Vylet-Martin-11b		2001:718:1001:2c6::11b
+pksII-ct-0945-Zhor-Jan-11c		2001:718:1001:2c6::11c
+
+
+pksII-ct-1230-Broda-Lukas-121		2001:718:1001:2c6::121
+pksII-ct-1230-Grunert-Lukas-122		2001:718:1001:2c6::122
+pksII-ct-1230-Kalich-Zdenek-123		2001:718:1001:2c6::123
+pksII-ct-1230-Krupa-Daniel-124		2001:718:1001:2c6::124
+pksII-ct-1230-Malanik-Jakub-125		2001:718:1001:2c6::125
+pksII-ct-1230-Palovsky-Ondrej-126	2001:718:1001:2c6::126
+pksII-ct-1230-Stipal-Jiri-127		2001:718:1001:2c6::127
+pksII-ct-1230-Timkovic-Matus-128	2001:718:1001:2c6::128
+pksII-ct-1230-Trubak-Kamil-129		2001:718:1001:2c6::129
+pksII-ct-1230-Vanek-Michal-12a		2001:718:1001:2c6::12a
+pksII-ct-1230-Vanek-Petr-12b		2001:718:1001:2c6::12b
+pksII-ct-1230-Zeman-Dalibor-12c		2001:718:1001:2c6::12c
+
+
+
+
+pksII-pa-0900-Dobrovolna-Adela-151	2001:718:1001:2c6::151
+pksII-pa-0900-Galar-David-152		2001:718:1001:2c6::152
+pksII-pa-0900-Jelinek-Tomas-153 	2001:718:1001:2c6::153
+pksII-pa-0900-Pisova-Michaela-154	2001:718:1001:2c6::154
+pksII-pa-0900--155		2001:718:1001:2c6::155
+pksII-pa-0900--156		2001:718:1001:2c6::156
+pksII-pa-0900--157		2001:718:1001:2c6::157
+pksII-pa-0900--158		2001:718:1001:2c6::158
+pksII-pa-0900--159		2001:718:1001:2c6::159
+pksII-pa-0900--15a	 	2001:718:1001:2c6::15a
+pksII-pa-0900--15b		2001:718:1001:2c6::15b
+pksII-pa-0900--15c	 	2001:718:1001:2c6::15c
+
+

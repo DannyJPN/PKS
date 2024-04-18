@@ -1,0 +1,54 @@
+#naše instalace
+mkdir freediameter
+cd freediameter
+wget http://www.freediameter.net/hg/freeDiameter/archive/1.5.0.tar.gz
+tar -xavf 1.5.0.tar.gz
+mkdir fDbuild
+cmake ../freeDiameter-1.5.0
+make
+make install
+
+
+
+
+
+#Instalace programu freeDiameter užitím nástroje Mercurial
+apt install mercurial
+apt install cmake
+apt install libsctp-dev
+hg clone http://www.freediameter.net/hg/freeDiameter
+mkdir fDbuild
+cd fDbuild
+cmake ../freeDiameter
+sed -i -e 's%ALL_EXTENSIONS:BOOL=OFF%ALL_EXTENSIONS:BOOL=ON%g' CMakeCache.txt
+make
+make install
+
+
+#Nastavení cesty ke sdíleným knihovnám
+LD_LIBRARY_PATH=/usr/local/lib
+ldconfig
+
+
+#Vytvoření SSL certifikátů pro virtuální stroj diamserver
+mkdir -p /usr/local/etc/freeDiameter/diametercert/
+cd /usr/local/etc/freeDiameter/diametercert/
+openssl req -new -batch -x509 -days 3650 -nodes \-newkey rsa:1024 -out cert.pem -keyout privkey.pem \-subj /CN=diamserver.vsb.cz
+openssl dhparam -out dh.pem 1024
+
+
+#Přesunutí vzorových konfiguračních souborů do pracovního adresáře
+cp /install_files/freediameter/freeDiameter/doc/freediameter.conf.sample /usr/local/etc/freeDiameter/freeDiameter.conf
+mkdir -p /usr/local/etc/freeDiameter/extensions/samples/
+cp -r /install_files/freediameter/freeDiameter/doc/. /usr/local/etc/freeDiameter/extensions/samples/
+
+
+#Základní definice účastníků v konfiguračním souboru freeDiameter.conf
+TLS_Cred = "/usr/local/etc/freeDiameter/diametercert/cert.pem", "/usr/local/etc/freeDiameter/diametercert/privkey.pem";
+TLS_CA = "/usr/local/etc/freeDiameter/diametercert/cert.pem";
+TLS_DH_File = "/usr/local/etc/freeDiameter/diametercert/dh.pem";
+
+Identity = "diamserver.vsb.cz";
+Realm = "vsb.cz";
+
+ConnectPeer = "diamclient.vsb.cz" { No_TLS; };

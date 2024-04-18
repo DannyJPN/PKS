@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+        <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+        <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+		<script>
+		
+		
+				function hourly_activate()
+                    {                        
+                     var myNavigator = document.getElementById('GraphSelector');
+                        myNavigator.pushPage('hourly.html');   
+                    }
+				function daily_activate()
+                    {                        
+                     var myNavigator = document.getElementById('GraphSelector');
+                        myNavigator.pushPage('daily.html');   
+                    }
+				function weekly_activate()
+                    {                        
+                     var myNavigator = document.getElementById('GraphSelector');
+                        myNavigator.pushPage('weekly.html');   
+                    }
+				function monthly_activate()
+                    {                        
+                     var myNavigator = document.getElementById('GraphSelector');
+                        myNavigator.pushPage('monthly.html');   
+                    }
+				function yearly_activate()
+                    {                        
+                     var myNavigator = document.getElementById('GraphSelector');
+                        myNavigator.pushPage('yearly.html');   
+                    }
+		
+		
+		
+		
+		
+		
+		</script>
+    </head>
+    <body>
+    <ons-navigator swipeable id="GraphSelector" page="hourly.html"></ons-navigator>
+
+    <template id="hourly.html">
+        <ons-page id="hourly">
+            <ons-toolbar>
+			
+                <div class="center">Hourly graph</div>
+            </ons-toolbar>
+			<p style="text-align: center">
+			<img  id="graph" style="width: 50%; height: auto" src="net-ens3_new_small.png">
+			</p>
+			<ons-button onclick="hourly_activate()" id="hourbutton">Hourly</ons-button>
+			<ons-button onclick="daily_activate()" id="daybutton">Daily</ons-button>
+			<ons-button onclick="weekly_activate()" id="weekbutton">Weekly</ons-button>
+			<ons-button onclick="monthly_activate()" id="monthbutton">Monthly</ons-button>
+			<ons-button onclick="yearly_activate()" id="yearbutton">Yearly</ons-button>
+<p>https://oss.oetiker.ch/rrdtool/index.en.html                                                            </p>
+<p>https://man7.org/linux/man-pages/                                        </p>
+<p>https://blog.tinned-software.net/understand-the-basics-of-rrdtool-to-create-a-simple-graph/</p>
+
+
+   
+        </ons-page>
+    </template>
+    <template id="daily.html">
+        <ons-page id="daily">
+            <ons-toolbar>
+                <div class="center">Daily graph</div>
+            </ons-toolbar>
+			<p style="text-align: center">
+			<img  id="graph" style="width: 50%; height: auto" src="net-ens3_new_day.png">
+			</p>
+			<ons-button onclick="hourly_activate()" id="hourbutton">Hourly</ons-button>
+			<ons-button onclick="daily_activate()" id="daybutton">Daily</ons-button>
+			<ons-button onclick="weekly_activate()" id="weekbutton">Weekly</ons-button>
+			<ons-button onclick="monthly_activate()" id="monthbutton">Monthly</ons-button>
+			<ons-button onclick="yearly_activate()" id="yearbutton">Yearly</ons-button>
+<p>https://oss.oetiker.ch/rrdtool/index.en.html                                                            </p>
+<p>https://man7.org/linux/man-pages/                                        </p>
+<p>https://blog.tinned-software.net/understand-the-basics-of-rrdtool-to-create-a-simple-graph/</p>
+			
+
+   
+        </ons-page>
+    </template>
+    <template id="weekly.html">
+        <ons-page id="weekly">
+            <ons-toolbar>
+                <div class="center">Weekly graph</div>
+            </ons-toolbar>
+			<p style="text-align: center">
+			<img  id="graph" style="width: 50%; height: auto" src="net-ens3_new_week.png">
+			</p>
+			<ons-button onclick="hourly_activate()" id="hourbutton">Hourly</ons-button>
+			<ons-button onclick="daily_activate()" id="daybutton">Daily</ons-button>
+			<ons-button onclick="weekly_activate()" id="weekbutton">Weekly</ons-button>
+			<ons-button onclick="monthly_activate()" id="monthbutton">Monthly</ons-button>
+			<ons-button onclick="yearly_activate()" id="yearbutton">Yearly</ons-button>
+<p>https://oss.oetiker.ch/rrdtool/index.en.html                                                            </p>
+<p>https://man7.org/linux/man-pages/                                        </p>
+<p>https://blog.tinned-software.net/understand-the-basics-of-rrdtool-to-create-a-simple-graph/</p>
+			
+
+   
+        </ons-page>
+    </template>
+    <template id="monthly.html">
+        <ons-page id="monthly">
+            <ons-toolbar>
+                <div class="center">Month graph</div>
+            </ons-toolbar>
+			<p style="text-align: center">
+			<img  id="graph" style="width: 50%; height: auto" src="net-ens3_new_month.png">
+			</p>
+			<ons-button onclick="hourly_activate()" id="hourbutton">Hourly</ons-button>
+			<ons-button onclick="daily_activate()" id="daybutton">Daily</ons-button>
+			<ons-button onclick="weekly_activate()" id="weekbutton">Weekly</ons-button>
+			<ons-button onclick="monthly_activate()" id="monthbutton">Monthly</ons-button>
+			<ons-button onclick="yearly_activate()" id="yearbutton">Yearly</ons-button>
+<p>https://oss.oetiker.ch/rrdtool/index.en.html                                                            </p>
+<p>https://man7.org/linux/man-pages/                                        </p>
+<p>https://blog.tinned-software.net/understand-the-basics-of-rrdtool-to-create-a-simple-graph/</p>
+			
+
+   
+        </ons-page>
+    </template>
+    <template id="yearly.html">
+        <ons-page id="yearly">
+            <ons-toolbar>
+                <div class="center">Yearly graph</div>
+            </ons-toolbar>
+			<p style="text-align: center">
+			<img  id="graph" style="width: 50%; height: auto" src="net-ens3_new_year.png">
+			</p>
+			<ons-button onclick="hourly_activate()" id="hourbutton">Hourly</ons-button>
+			<ons-button onclick="daily_activate()" id="daybutton">Daily</ons-button>
+			<ons-button onclick="weekly_activate()" id="weekbutton">Weekly</ons-button>
+			<ons-button onclick="monthly_activate()" id="monthbutton">Monthly</ons-button>
+			<ons-button onclick="yearly_activate()" id="yearbutton">Yearly</ons-button>
+<p>https://oss.oetiker.ch/rrdtool/index.en.html                                                            </p>
+<p>https://man7.org/linux/man-pages/                                        </p>
+<p>https://blog.tinned-software.net/understand-the-basics-of-rrdtool-to-create-a-simple-graph/</p>
+			
+
+   
+        </ons-page>
+    </template>
+
+
+</body>
+</html>
